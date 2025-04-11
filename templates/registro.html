@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Registro de Instructor</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">Nombre Completo</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Correo Electrónico</label>
+        <input type="email" name="correo" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Regional</label>
+        <select name="regional" class="form-select" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Cauca">Cauca</option>
+            <option value="Huila">Huila</option>
+            <option value="Antioquia">Antioquia</option>
+            <option value="Valle">Valle</option>
+            <option value="Nariño">Nariño</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Registrarse</button>
+    <p>trabajo realizado por wesly santiago ceron </p>
+</form>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Subir Guía de Aprendizaje</h2>
+<form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label class="form-label">Nombre de la Guía</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea name="descripcion" class="form-control" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Programa de Formación</label>
+        <select name="programa" class="form-select" required>
+            <option value="">Seleccione</option>
+            <option>Desarrollo de Software</option>
+            <option>Multimedia</option>
+            <option>Inteligencia Artificial</option>
+            <option>Analítica de Datos</option>
+            <option>Construcción</option>
+            <option>Contabilidad</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Archivo PDF</label>
+        <input type="file" name="archivo" accept="application/pdf" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Subir Guía</button>
+    <p>trabajo realizado por wesly santiago ceron </p>
+</form>
+{% endblock %}
